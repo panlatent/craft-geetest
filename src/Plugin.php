@@ -2,8 +2,8 @@
 /**
  * Geetest plugin for Craft 3
  *
- * @link      https://panlatent.com/
- * @copyright Copyright (c) 2018 panlatent@gmail.com
+ * @link https://github.com/panlatent/craft-geetest/
+ * @copyright Copyright (c) 2018 Panlatent
  */
 
 namespace panlatent\craft\geetest;
