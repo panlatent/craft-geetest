@@ -41,6 +41,26 @@ To install the plugin, follow these instructions.
 
 Usage
 -----
+1. Set Plugin Setting: Access ID and Access Key
+
+2. Add to a template:
+```twig
+{{ geetestInput() }}
+```
+
+Notice: Don't forget CSRF verification `{{ csrfInput() }}`.
+
+3. Validate in a controller:
+```php
+public function actionRegister()
+{
+    \panlatent\craft\geetest\helpers\Getest::requireValidated();
+    
+    // or
+    
+    $isValid = \panlatent\craft\geetest\helpers\Getest::isValidated();
+}
+```
 
 Documentation
 -------------

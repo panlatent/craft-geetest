@@ -1,0 +1,15 @@
+{% import "_includes/forms" as forms %}
+
+{{ forms.textField({
+    label: "Access ID"|t('geetest'),
+    instructions: 'Geetest api aceess id from <a href="https://account.geetest.com">geetest.com</a>.'|raw,
+    name: "accessId",
+    value: settings.accessId
+}) }}
+
+{{ forms.textField({
+    label: "Access Key"|t('geetest'),
+    instructions: 'Geetest api aceess key',
+    name: "accessKey",
+    value: settings.accessKey
+}) }}
