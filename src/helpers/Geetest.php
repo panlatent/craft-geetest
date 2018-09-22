@@ -49,4 +49,28 @@ class Geetest
 
         return Plugin::$plugin->getApi()->validate($id, $ip, $challenge, $validateValue, $secCode);
     }
+
+    public static function registerApiPrepareJsVar(string $id = null, string $ip = null)
+    {
+        if ($id === null) {
+            if (Craft::$app->user->getIsGuest()) {
+                $id = Craft::$app->session->getId();
+            } else {
+                $id = Craft::$app->user->identity->getId();
+            }
+        }
+
+        if ($ip === null) {
+            $ip = Craft::$app->request->getUserIP();
+        }
+
+        $challenge = Plugin::$plugin->getApi()->prepare(md5($id), $ip);
+
+        Craft::$app->view->registerJsVar('geetest', [
+            'success'   => 1,
+            'gt'        => Plugin::$plugin->getSettings()->accessId,
+            'challenge' => $challenge,
+            'new_captcha' => 1
+        ]);
+    }
 }

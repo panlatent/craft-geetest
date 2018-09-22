@@ -13,3 +13,10 @@
     name: "accessKey",
     value: settings.accessKey
 }) }}
+
+{{ forms.lightSwitchField({
+    label: "Embed in Login page"|t('geetest'),
+    instructions: 'Embed a captcha input in Login page and validate on post login action.',
+    name: "embedInLogin",
+    on: settings.embedInLogin
+}) }}

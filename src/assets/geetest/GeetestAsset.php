@@ -6,7 +6,7 @@
  * @copyright Copyright (c) 2018 Panlatent
  */
 
-namespace panlatent\craft\geetest\assets;
+namespace panlatent\craft\geetest\assets\geetest;
 
 use craft\web\AssetBundle;
 use yii\web\JqueryAsset;
@@ -16,7 +16,7 @@ class GeetestAsset extends AssetBundle
     /**
      * @var string
      */
-    public $sourcePath = '@geetest/assets/dist';
+    public $sourcePath = '@geetest/assets/geetest/dist';
 
     /**
      * @var array

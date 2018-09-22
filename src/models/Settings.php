@@ -21,4 +21,9 @@ class Settings extends Model
      * @var string|null
      */
     public $accessKey;
+
+    /**
+     * @var bool Show captcha in login page and validate input
+     */
+    public $embedInLogin = false;
 }
